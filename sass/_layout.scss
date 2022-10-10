@@ -1,0 +1,112 @@
+.container {
+  max-width: 120rem;
+  margin: 8rem auto;
+  background-color: var(--color-grey-light-2);
+  box-shadow: var(--shadow-dark);
+
+  min-height: 50rem;
+
+  @media only screen and (max-width: $bp-largest) {
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+.header {
+  font-size: 1.3rem;
+  height: 7rem;
+  background-color: #fff;
+  border-bottom: var(--line);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media only screen and (max-width: $bp-small) {
+    flex-wrap: wrap;
+    height: 11rem;
+    align-content: space-around;
+  }
+}
+
+.content {
+  display: flex;
+
+  @media only screen and (max-width: $bp-medium) {
+    flex-direction: column;
+  }
+}
+
+.sidebar {
+  background-color: var(--color-grey-dark-1);
+  // flex-grow | flex-shrink | flex-basis e.g. keep width at 18%
+  flex: 0 0 18%;
+
+  // flex on side bar to have the items at the top and bottom
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hotel-view {
+  background-color: #fff;
+  // flex grow
+  flex: 1;
+
+}
+
+.detail {
+  display: flex;
+  // add padding around main elements
+  padding: 4.5rem;
+  background-color: var(--color-grey-light-1);
+  border-bottom: var(--line);
+  font-size: 1.3rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 3rem;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    flex-direction: column;
+  }
+
+
+}
+
+/// for 2 main containers, we want to description to take up 60% width, user-reviews
+/// to take up the remaining space (flex grow 1) and a margin between both elements
+.description {
+  // set font for entire element
+  flex: 0 0 60%;
+  margin-right: 3.5rem;
+  background-color: #fff;
+  box-shadow: var(--shadow-light);
+  padding: 3rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 2rem;
+    margin-right: 3rem;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    margin-right: 0;
+    margin-bottom: 3rem;
+
+  }
+
+}
+
+.user-reviews {
+  flex: 1;
+  /// to center button at bottom of reviews section
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+}
+
+// #results {
+//   background-color: #fff;
+// }
